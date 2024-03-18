@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+npm install --save-dev framer-motion three react-intersection-observer @react-three/drei @react-three/fiber
+
 First, run the development server:
 
 ```bash
