@@ -40,15 +40,17 @@ const Navbar = () => {
           </div>
           {/* </div> */}
 
-          <div className="flex gap-5">
+          <div className="flex items-center gap-5">
             {Socials.map((social) => (
-              <Image
-                src={social.src}
-                alt={social.name}
-                key={social.name}
-                width={25}
-                height={25}
-              />
+              <a href={social.link} key={social.name} target="_blank">
+                <Image
+                  src={social.src}
+                  alt={social.name}
+                  width={25}
+                  height={25}
+                  className="hover:shadow-rose-500"
+                />
+              </a>
             ))}
           </div>
         </div>
