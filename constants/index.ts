@@ -1,22 +1,22 @@
 export const Socials = [
   {
     name: 'Github',
-    src: '/github-gray.svg',
+    src: '/icons/Social/github-gray.svg',
     link: 'https://github.com/LGelashvili16',
   },
   {
     name: 'Discord',
-    src: '/discord-gray.svg',
+    src: '/icons/Social/discord-gray.svg',
     link: 'https://discord.com/users/906907151354724382',
   },
   {
     name: 'Facebook',
-    src: '/facebook-gray.svg',
+    src: '/icons/Social/facebook-gray.svg',
     link: 'https://www.facebook.com/Gelashvili.16/',
   },
   {
     name: 'Linkedin',
-    src: '/linkedin-gray.svg',
+    src: '/icons/Social/linkedin-gray.svg',
     link: 'https://www.linkedin.com/in/lado-gelashvili/',
   },
 ];
@@ -171,5 +171,66 @@ export const SOFTWARE_TOOLS = [
     image: '/icons/Tools/Adobe_XD.svg',
     width: 50,
     height: 50,
+  },
+];
+
+export const FOOTER_CONTACT = [
+  {
+    name: 'Github',
+    src: '/icons/social/github-gray.svg',
+    link: 'https://github.com/LGelashvili16',
+  },
+  {
+    name: 'Discord',
+    src: '/icons/Social/discord-gray.svg',
+    link: 'https://discord.com/users/906907151354724382',
+  },
+  {
+    name: 'Telegram',
+    src: '/icons/Social/telegram-gray.svg',
+    link: 'https://t.me/LGelashvili',
+  },
+  {
+    name: 'Gmail',
+    src: '/icons/Social/gmail-gray.svg',
+    link: 'mailto:ladogelashvili16@gmail.com',
+  },
+];
+
+export const FOOTER_SOCIALS = [
+  {
+    name: 'Linkedin',
+    src: '/icons/social/linkedin-gray.svg',
+    link: 'https://www.linkedin.com/in/lado-gelashvili/',
+  },
+  {
+    name: 'X',
+    src: '/icons/social/x-gray.svg',
+    link: 'https://x.com/LGelashvili16',
+  },
+  {
+    name: 'Facebook',
+    src: '/icons/social/facebook-gray.svg',
+    link: 'https://www.facebook.com/Gelashvili.16/',
+  },
+  {
+    name: 'Instagram',
+    src: '/icons/social/instagram-gray.svg',
+    link: 'https://www.instagram.com/lgelashvili16/',
+  },
+];
+
+export const FOOTER_ABOUT = [
+  {
+    title: 'About me',
+    to: '#about-me',
+  },
+  {
+    title: 'Skills',
+    to: '#skills',
+  },
+  {
+    title: 'Projects',
+    to: '#projects',
   },
 ];

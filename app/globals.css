@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 .cursive {
@@ -72,4 +73,32 @@ html {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
+}
+
+.hole-animation {
+  animation: animate-hole 30s infinite ease-in-out alternate;
+}
+
+@keyframes animate-hole {
+  0% {
+    transform: translateX(-50%);
+  }
+  20% {
+    transform: translateX(-10%);
+  }
+  40% {
+    transform: translateX(-20%);
+  }
+  60% {
+    transform: translateX(20%);
+  }
+  80% {
+    transform: translateX(10%);
+  }
+  90% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
 }
