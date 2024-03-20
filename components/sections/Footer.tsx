@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden w-full h-full  bg-transparent text-gray-200 shadow-lg shadow-lg shadow-[#2A0E61]/50  border-t border-[#2A0E61]">
       <div className="bg-[#03001417] backdrop-blur-3xl pt-8">
-        <div className="w-full h-full flex gap-16 items-start justify-around flex-wrap">
+        <div className="w-11/12 h-full mx-auto flex gap-16 items-start justify-around flex-wrap">
           <ul className="h-auto min-w-40 flex flex-col justify-start gap-4">
             <div className="font-bold text-base mb-4">Contact</div>
             {FOOTER_CONTACT.map((item) => (

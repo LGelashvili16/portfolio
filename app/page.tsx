@@ -5,7 +5,7 @@ import Skills from '@/components/sections/Skills';
 
 export default function Home() {
   return (
-    <main className="h-full w-full">
+    <main className="h-full w-11/12 mx-auto">
       <div className="flex flex-col gap-20">
         <Hero />
         <Skills />

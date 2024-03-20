@@ -15,37 +15,32 @@ const ProjectCard = ({ src, title, description, link }: Props) => {
   };
 
   return (
-    <div onClick={clickHandler} className="project-card">
-      {/* <div className="absolute inset-0 bg-[#3b2f7493] backdrop-blur-sm z-[-10]"></div> */}
+    <div className="project-card h-min max-w-lg ">
+      <div className="absolute inset-0 left-0 rounded-lg bg-black"></div>
       <Image
         src={src}
         alt={title}
         width={1000}
         height={1000}
-        className="w-full object-contain rounded-tl-lg rounded-tr-lg"
+        className="relative w-full rounded-tl-lg rounded-tr-lg"
       />
-      <div className="relative p-4">
+      <div className="relative p-4 transition-all duration-500">
         <h2 className="text-2xl font-semibold text-white">{title}</h2>
-        <p className="mt-2 text-gray-300">{description}</p>
+        <p className="cutoff-text mt-2 text-gray-300 transition-all duration-500">
+          {description}
+        </p>
+
+        <div className="flex items-center justify-between">
+          <input className="expand-btn" type="checkbox" />
+          <button
+            onClick={clickHandler}
+            className="py-1 px-2 mt-4 h-full border rounded-md border-indigo-700 hover:bg-indigo-700"
+          >
+            Open Project
+          </button>
+        </div>
       </div>
     </div>
-    // <div
-    //   onClick={clickHandler}
-    //   className="relative overflow-hidden rounded-lg shadow-2xl border border-[#2A0E61] hover:scale-110 transition-transform cursor-pointer "
-    // >
-    //   <div className="absolute inset-0 bg-[#3b2f7493] backdrop-blur-sm z-[-10]"></div>
-    //   <Image
-    //     src={src}
-    //     alt={title}
-    //     width={1000}
-    //     height={1000}
-    //     className="w-full object-contain"
-    //   />
-    //   <div className="relative p-4">
-    //     <h2 className="text-2xl font-semibold text-white">{title}</h2>
-    //     <p className="mt-2 text-gray-300">{description}</p>
-    //   </div>
-    // </div>
   );
 };
 

@@ -16,7 +16,7 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex items-center justify-center px-20 mt-32 w-full z-[20]"
+      className="flex items-center justify-center px-20 mt-10 w-full"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center items-start m-auto text-start">
         <motion.div
@@ -63,9 +63,9 @@ const HeroContent = () => {
         <Image
           src="/mainIconsdark.svg"
           alt="work icons"
-          height={650}
-          width={650}
-          className="drag-none"
+          height={550}
+          width={550}
+          className="drag-none mt-10"
         />
       </motion.div>
     </motion.div>

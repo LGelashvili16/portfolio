@@ -109,42 +109,18 @@ export const BACKEND_SKILLS = [
     width: 70,
     height: 70,
   },
-  // {
-  //   skill_name: 'PostgreSQL',
-  //   image: '/icons/Backend/PostgresSQL.svg',
-  //   width: 70,
-  //   height: 70,
-  // },
-  // {
-  //   skill_name: 'MySQL',
-  //   image: '/icons/Backend/MySQL.svg',
-  //   width: 70,
-  //   height: 70,
-  // },
   {
     skill_name: 'Firebase',
     image: '/icons/Backend/Firebase.svg',
     width: 70,
     height: 70,
   },
-  // {
-  //   skill_name: 'Prisma',
-  //   image: '/prisma.webp',
-  //   width: 70,
-  //   height: 70,
-  // },
   {
     skill_name: 'GraphQL',
     image: '/icons/Backend/GraphQL.svg',
     width: 70,
     height: 70,
   },
-  // {
-  //   skill_name: 'Socket',
-  //   image: '/icons/Backend/Socketio.svg',
-  //   width: 80,
-  //   height: 80,
-  // },
 ];
 
 export const SOFTWARE_TOOLS = [
@@ -154,12 +130,6 @@ export const SOFTWARE_TOOLS = [
     width: 50,
     height: 50,
   },
-  // {
-  //   skill_name: 'Docker',
-  //   image: '/icons/Tools/Docker.svg',
-  //   width: 70,
-  //   height: 70,
-  // },
   {
     skill_name: 'Figma',
     image: '/icons/Tools/Figma.svg',
@@ -241,27 +211,27 @@ export const PROJECTS = [
     link: 'https://lgelashvili16.github.io/sweeft',
     title: 'Photo Gallery',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      "This project is a photo gallery application. Its key components include the implementation of infinite scroll, API caching, and debounce technique. For instance, when users search for 'car,' the data is downloaded. Subsequently, if you search for another term like 'home,' new data is fetched. However, if they search for 'car' again, the data is accessed from the cache instead of being downloaded anew. This approach optimizes data usage and improves performance. Additionally, the application features a history page where all previous search terms are stored.",
   },
   {
     src: '/projects/online-store.webp',
     link: 'https://lgelashvili16.github.io/online-store/',
     title: 'Online Store',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'This project is an online store application with various functionalities, including form validation, user creation, user deletion, product management (such as adding products to favorites and cart), and calculating the total sum of products in the cart.',
   },
   {
     src: '/projects/book-shop.webp',
     link: 'https://lgelashvili16.github.io/book-shop/pages/store%20page/index.html',
     title: 'Book Shop',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'This project is a bookshop application created solely using DOM manipulations, without any HTML code. It includes functionalities such as adding books to the cart and calculating the total price sum.',
   },
   {
     src: '/projects/online-zoo.webp',
     link: 'https://lgelashvili16.github.io/online-zoo/pages/main/',
     title: 'Online Zoo',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'This project showcases clean HTML, CSS, and JavaScript code. Notably, sliders are implemented without relying on any external libraries.',
   },
 ];

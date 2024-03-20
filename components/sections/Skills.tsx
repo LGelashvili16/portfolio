@@ -7,11 +7,11 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20"
-      //   style={{ transform: 'scale(0.9)' }}
+      className="flex flex-col items-center justify-center gap-3 h-auto py-20"
+      // style={{ transform: 'scale(0.9)' }}
     >
       <SkillText />
-      <div className="flex justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex justify-center items-center flex-wrap mt-4 gap-5 ">
         {FRONTEND_SKILLS.map((image, index) => (
           <SkillData
             key={image.skill_name}
@@ -22,7 +22,7 @@ const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex justify-center flex-wrap mt-4 gap-5 items-center">
         {BACKEND_SKILLS.map((image, index) => (
           <SkillData
             key={image.skill_name}
@@ -33,7 +33,7 @@ const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex justify-center flex-wrap mt-4 gap-5 items-center">
         {SOFTWARE_TOOLS.map((image, index) => (
           <SkillData
             key={image.skill_name}

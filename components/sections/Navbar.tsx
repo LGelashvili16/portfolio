@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
-      <div className="w-full h-full flex items-center justify-between  m-auto px-[10px]">
+      <div className="w-11/12 h-full flex items-center justify-between  m-auto px-[10px]">
         <a href="#about-me" className="h-full w-auto flex items-center gap-4">
           <Image
             src="/NavLogo.svg"

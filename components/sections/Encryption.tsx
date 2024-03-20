@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Encryption = () => {
   return (
-    <div className="flex relative items-center justify-center min-h-screen w-full h-full">
+    <div className="flex relative items-center justify-center min-h-screen w-full">
       <div className="absolute top-0 z-[5]">
         <motion.p
           variants={slideInFromTop}
@@ -56,7 +56,7 @@ const Encryption = () => {
           autoPlay
           playsInline
           preload="false"
-          className="w-full "
+          className="w-full -z-10"
           src="/encryption.webm"
         ></video>
       </div>
