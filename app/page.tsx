@@ -1,7 +1,7 @@
-import Encryption from '@/components/main/Encryption';
-import Hero from '@/components/main/Hero';
-import Projects from '@/components/main/Projects';
-import Skills from '@/components/main/Skills';
+import Encryption from '@/components/sections/Encryption';
+import Hero from '@/components/sections/Hero';
+import Projects from '@/components/sections/Projects';
+import Skills from '@/components/sections/Skills';
 
 export default function Home() {
   return (

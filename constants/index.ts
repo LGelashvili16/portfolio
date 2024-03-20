@@ -234,3 +234,34 @@ export const FOOTER_ABOUT = [
     to: '#projects',
   },
 ];
+
+export const PROJECTS = [
+  {
+    src: '/projects/gallery.webp',
+    link: 'https://lgelashvili16.github.io/sweeft',
+    title: 'Photo Gallery',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    src: '/projects/online-store.webp',
+    link: 'https://lgelashvili16.github.io/online-store/',
+    title: 'Online Store',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    src: '/projects/book-shop.webp',
+    link: 'https://lgelashvili16.github.io/book-shop/pages/store%20page/index.html',
+    title: 'Book Shop',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    src: '/projects/online-zoo.webp',
+    link: 'https://lgelashvili16.github.io/online-zoo/pages/main/',
+    title: 'Online Zoo',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+];

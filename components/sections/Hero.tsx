@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroContent from '../sub/HeroContent';
-import BlackHole from '../sub/BlackHole';
+import HeroContent from '../sections-content/HeroContent';
+import BlackHole from '../sections-content/BlackHole';
 
 const Hero = () => {
   return (

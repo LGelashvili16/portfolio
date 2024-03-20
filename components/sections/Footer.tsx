@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { FOOTER_ABOUT, FOOTER_CONTACT, FOOTER_SOCIALS } from '@/constants';
-import BlackHole from '../sub/BlackHole';
+import BlackHole from '../sections-content/BlackHole';
 
 const Footer = () => {
   const getYear = new Date().getFullYear();

@@ -1,4 +1,5 @@
-import ProjectCard from '../sub/ProjectCard';
+import { PROJECTS } from '@/constants';
+import ProjectCard from '../sections-content/ProjectCard';
 
 const Projects = () => {
   return (
@@ -11,7 +12,16 @@ const Projects = () => {
       </h2>
 
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
-        <ProjectCard
+        {PROJECTS.map((project) => (
+          <ProjectCard
+            key={project.title}
+            src={project.src}
+            title={project.title}
+            description={project.description}
+            link={project.link}
+          />
+        ))}
+        {/* <ProjectCard
           src="/NextWebsite.png"
           title="Modern Next.js Portfolio"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -25,7 +35,7 @@ const Projects = () => {
           src="/SpaceWebsite.png"
           title="Space Themed Website"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
+        /> */}
       </div>
     </div>
   );

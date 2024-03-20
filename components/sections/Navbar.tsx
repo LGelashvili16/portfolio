@@ -3,13 +3,11 @@ import Image from 'next/image';
 import React from 'react';
 
 const Navbar = () => {
-  //   const navLinkStyles =
-  //     'text-xs md:text-base cursor-pointer transition-colors transition-transform hover:text-indigo-400 hover:scale-95 ';
   const navLinkStyles =
     'text-xs md:text-base px-4 py-0.5 cursor-pointer transition-all hover:bg-[#6e39ff69] hover:rounded-2xl hover:text-white hover:scale-90';
 
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
+    <header className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
       <div className="w-full h-full flex items-center justify-between  m-auto px-[10px]">
         <a href="#about-me" className="h-full w-auto flex items-center gap-4">
           <Image
@@ -55,7 +53,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

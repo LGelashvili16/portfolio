@@ -1,7 +1,7 @@
 import { BACKEND_SKILLS, FRONTEND_SKILLS, SOFTWARE_TOOLS } from '@/constants';
 import React from 'react';
-import SkillData from '../sub/SkillData';
-import SkillText from '../sub/SkillText';
+import SkillData from '../sections-content/SkillData';
+import SkillText from '../sections-content/SkillText';
 
 const Skills = () => {
   return (
