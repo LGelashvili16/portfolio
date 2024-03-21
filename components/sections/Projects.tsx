@@ -1,5 +1,7 @@
+'use client';
 import { PROJECTS } from '@/constants';
 import ProjectCard from '../sections-content/ProjectCard';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
@@ -11,8 +13,12 @@ const Projects = () => {
         My Projects
       </h2>
 
-      {/* <div className="h-full w-full flex flex-col flex-wrap md:flex-row gap-10 px-10"> */}
-      <div className="h-full w-full grid grid-cols-3 gap-12 px-10">
+      <motion.div
+        variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+        initial={{ x: -50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        className="h-full w-full grid grid-cols-3 gap-12 px-10"
+      >
         {PROJECTS.map((project) => (
           <ProjectCard
             key={project.title}
@@ -22,7 +28,7 @@ const Projects = () => {
             link={project.link}
           />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

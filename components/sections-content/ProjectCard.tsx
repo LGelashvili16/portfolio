@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 type Props = {
   src: string;
@@ -15,7 +16,22 @@ const ProjectCard = ({ src, title, description, link }: Props) => {
   };
 
   return (
-    <div className="project-card h-min max-w-lg ">
+    <motion.div
+      variants={{
+        hidden: {
+          x: -100,
+          opacity: 0,
+        },
+        visible: {
+          x: 0,
+          opacity: 1,
+        },
+      }}
+      initial="hidden"
+      animate="visible"
+      transition={{ type: 'spring' }}
+      className="project-card h-min max-w-lg "
+    >
       <div className="absolute inset-0 left-0 rounded-lg bg-black"></div>
       <Image
         src={src}
@@ -40,7 +56,7 @@ const ProjectCard = ({ src, title, description, link }: Props) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
