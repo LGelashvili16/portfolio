@@ -73,11 +73,18 @@ html {
   animation: animate-hole 30s infinite ease-in-out alternate;
 }
 
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
+  place-content: center;
+  gap: 2rem;
+}
+
 .project-card {
   position: relative;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: transform 0.3s;
+  /* transition: transform 0.3s; */
 }
 
 .project-card:hover {

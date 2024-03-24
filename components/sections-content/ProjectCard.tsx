@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useInView, useAnimation } from 'framer-motion';
+import { useRef } from 'react';
 
 type Props = {
   src: string;
@@ -11,25 +12,29 @@ type Props = {
 };
 
 const ProjectCard = ({ src, title, description, link }: Props) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
   const clickHandler = () => {
     window.open(link, '_blank');
   };
 
   return (
     <motion.div
+      ref={ref}
       variants={{
         hidden: {
-          x: -100,
+          y: 100,
           opacity: 0,
         },
         visible: {
-          x: 0,
+          y: 0,
           opacity: 1,
         },
       }}
       initial="hidden"
-      animate="visible"
-      transition={{ type: 'spring' }}
+      animate={isInView ? 'visible' : 'hidden'}
+      transition={{ delay: 0.2, duration: 0.7, type: 'spring', bounce: 0.6 }}
       className="project-card h-min max-w-lg "
     >
       <div className="absolute inset-0 left-0 rounded-lg bg-black"></div>

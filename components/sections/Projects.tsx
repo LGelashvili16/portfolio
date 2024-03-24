@@ -14,10 +14,10 @@ const Projects = () => {
       </h2>
 
       <motion.div
-        variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-        initial={{ x: -50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        className="h-full w-full grid grid-cols-3 gap-12 px-10"
+        // variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+        // initial={{ x: -50, opacity: 0 }}
+        // animate={{ x: 0, opacity: 1 }}
+        className="projects h-full w-full px-10"
       >
         {PROJECTS.map((project) => (
           <ProjectCard
