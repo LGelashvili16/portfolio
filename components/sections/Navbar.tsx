@@ -1,15 +1,64 @@
+'use client';
+
 import { Socials } from '@/constants';
+import {
+  motion,
+  useMotionValue,
+  useMotionValueEvent,
+  useScroll,
+} from 'framer-motion';
 import Image from 'next/image';
-import React from 'react';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import GsapMagnetic from '../sections-content/GsapMagnetic';
 
 const Navbar = () => {
+  const [hidden, setHidden] = useState(false);
+  const { scrollY } = useScroll();
+  const MotionLink = motion(Link);
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
+  const links = [
+    {
+      path: '/#about-me',
+      name: 'About me',
+    },
+    {
+      path: '/#skills',
+      name: 'Skills',
+    },
+    {
+      path: '/#projects',
+      name: 'Projects',
+    },
+  ];
+
   const navLinkStyles =
     'text-xs md:text-base px-4 py-0.5 cursor-pointer transition-all hover:bg-[#6e39ff69] hover:rounded-2xl hover:text-white hover:scale-90';
 
   return (
-    <header className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
+    <motion.header
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: '-100%' },
+      }}
+      animate={!hidden ? 'visible' : 'hidden'}
+      transition={{ duration: 0.35, ease: 'easeInOut' }}
+      className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10"
+    >
       <div className="w-11/12 h-full flex items-center justify-between  m-auto px-[10px]">
-        <a href="#about-me" className="h-full w-auto flex items-center gap-4">
+        <Link
+          href="#about-me"
+          className="h-full w-auto flex items-center gap-4"
+        >
           <Image
             src="/NavLogo.svg"
             alt="logo"
@@ -21,22 +70,30 @@ const Navbar = () => {
           <span className="font-bold hidden md:block text-gray-300">
             LGelashvili
           </span>
-        </a>
+        </Link>
 
-        <div className="flex md:gap-10">
-          {/* <div className="h-full flex items-center justify-between mr-20 md:mr-0  justify-self-start"> */}
-          <div className="max-h-12 flex items-center gap-5 border border-[#7042f861] bg-[#0300145e] mr-[15px] md:mr-0 px-[20px] py-[10px] rounded-full text-gray-200">
-            <a href="#about-me" className={navLinkStyles}>
-              About me
-            </a>
-            <a href="#skills" className={navLinkStyles}>
-              Skills
-            </a>
-            <a href="#projects" className={navLinkStyles}>
-              Projects
-            </a>
-          </div>
-          {/* </div> */}
+        <div className=" h-full flex md:gap-10">
+          <nav>
+            <motion.ul
+              // className="max-h-12 flex items-center gap-5 border border-[#7042f861] bg-[#0300145e] mr-[15px] md:mr-0 px-[20px] py-[10px] rounded-full text-gray-200 list-none"
+              className="flex items-center gap-8 h-full"
+            >
+              {links.map((link) => {
+                return (
+                  <GsapMagnetic key={link.path}>
+                    <MotionLink
+                      href={link.path}
+                      // className="font-medium text-sm rounded-md py-2 px-4 transition-all duration-500 ease-out hover:bg-slate-200"
+                      // className={navLinkStyles}
+                      className="inline-block font-medium px-4 py-2 rounded-lg transition-bg duration-200 hover:bg-[#7042f861]"
+                    >
+                      {link.name}
+                    </MotionLink>
+                  </GsapMagnetic>
+                );
+              })}
+            </motion.ul>
+          </nav>
 
           <div className="flex items-center gap-5">
             {Socials.map((social) => (
@@ -53,7 +110,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
