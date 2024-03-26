@@ -1,12 +1,7 @@
 'use client';
 
 import { Socials } from '@/constants';
-import {
-  motion,
-  useMotionValue,
-  useMotionValueEvent,
-  useScroll,
-} from 'framer-motion';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
@@ -19,7 +14,7 @@ const Navbar = () => {
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious();
-    if (latest > previous && latest > 150) {
+    if (previous && latest > previous && latest > 150) {
       setHidden(true);
     } else {
       setHidden(false);
@@ -74,17 +69,12 @@ const Navbar = () => {
 
         <div className=" h-full flex md:gap-10">
           <nav>
-            <motion.ul
-              // className="max-h-12 flex items-center gap-5 border border-[#7042f861] bg-[#0300145e] mr-[15px] md:mr-0 px-[20px] py-[10px] rounded-full text-gray-200 list-none"
-              className="flex items-center gap-8 h-full"
-            >
+            <motion.ul className="flex items-center gap-8 h-full">
               {links.map((link) => {
                 return (
                   <GsapMagnetic key={link.path}>
                     <MotionLink
                       href={link.path}
-                      // className="font-medium text-sm rounded-md py-2 px-4 transition-all duration-500 ease-out hover:bg-slate-200"
-                      // className={navLinkStyles}
                       className="inline-block font-medium px-4 py-2 rounded-lg transition-bg duration-200 hover:bg-[#7042f861]"
                     >
                       {link.name}
