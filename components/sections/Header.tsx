@@ -4,10 +4,10 @@ import { Socials } from '@/constants';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import GsapMagnetic from '../sections-content/GsapMagnetic';
 
-const Navbar = () => {
+const Header = () => {
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
   const MotionLink = motion(Link);
@@ -73,12 +73,14 @@ const Navbar = () => {
               {links.map((link) => {
                 return (
                   <GsapMagnetic key={link.path}>
-                    <MotionLink
-                      href={link.path}
-                      className="inline-block font-medium px-4 py-2 rounded-lg transition-bg duration-200 hover:bg-[#7042f861]"
-                    >
-                      {link.name}
-                    </MotionLink>
+                    <div>
+                      <MotionLink
+                        href={link.path}
+                        className="inline-block font-medium px-4 py-2 rounded-lg transition-bg duration-200 hover:bg-[#7042f861]"
+                      >
+                        {link.name}
+                      </MotionLink>
+                    </div>
                   </GsapMagnetic>
                 );
               })}
@@ -104,4 +106,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
