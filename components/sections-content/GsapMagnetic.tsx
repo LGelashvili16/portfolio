@@ -17,10 +17,7 @@ const GsapMagnetic = ({ children }: { children: React.ReactNode }) => {
       ease: 'elastic.out(1, 0.3)',
     });
 
-    const mouseMove = function (
-      this: HTMLDivElement,
-      event: MouseEvent<HTMLDivElement, MouseEvent>
-    ) {
+    const mouseMove = (event: MouseEvent<HTMLLIElement>) => {
       if (magnetic.current) {
         const { clientX, clientY } = event;
 
@@ -37,10 +34,7 @@ const GsapMagnetic = ({ children }: { children: React.ReactNode }) => {
       }
     };
 
-    const mouseLeave = function (
-      this: HTMLDivElement,
-      event: MouseEvent<HTMLDivElement, MouseEvent>
-    ) {
+    const mouseLeave = (event: MouseEvent<HTMLLIElement>) => {
       gsap.to(magnetic.current, { x: 0, duration: 1 });
 
       gsap.to(magnetic.current, { y: 0, duration: 1 });
@@ -51,16 +45,16 @@ const GsapMagnetic = ({ children }: { children: React.ReactNode }) => {
     };
 
     if (magnetic.current) {
-      magnetic.current.addEventListener('mousemove', mouseMove);
+      magnetic.current.addEventListener('mousemove', mouseMove as any);
 
-      magnetic.current.addEventListener('mouseleave', mouseLeave);
+      magnetic.current.addEventListener('mouseleave', mouseLeave as any);
     }
 
     return () => {
       if (magnetic.current) {
-        magnetic.current.removeEventListener('mousemove', mouseMove);
+        magnetic.current.removeEventListener('mousemove', mouseMove as any);
 
-        magnetic.current.removeEventListener('mouseleave', mouseLeave);
+        magnetic.current.removeEventListener('mouseleave', mouseLeave as any);
       }
     };
   }, []);
