@@ -243,7 +243,7 @@ export const PROJECTS = [
   },
   {
     src: "/projects/shop.png",
-    link: "https://lgelashvili16.github.io/online-store/",
+    link: "",
     title: "Online Shop, in progress...",
     description:
       "This project is a work in progress, it is a custom e-commerce platform I'm developing for an advertising company specializing in large-format printing and signage. The website serves as an online shop for clients to browse and order a wide range of products, including signages, lightboxes, banners, and custom lighting letters.",
