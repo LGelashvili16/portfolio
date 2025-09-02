@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion, useInView, useAnimation } from 'framer-motion';
-import { useRef } from 'react';
+import Image from "next/image";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useRef } from "react";
 
 type Props = {
   src: string;
@@ -13,10 +13,10 @@ type Props = {
 
 const ProjectCard = ({ src, title, description, link }: Props) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const clickHandler = () => {
-    window.open(link, '_blank');
+    window.open(link, "_blank");
   };
 
   return (
@@ -33,8 +33,8 @@ const ProjectCard = ({ src, title, description, link }: Props) => {
         },
       }}
       initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
-      transition={{ delay: 0.2, duration: 0.7, type: 'spring', bounce: 0.6 }}
+      animate={isInView ? "visible" : "hidden"}
+      transition={{ delay: 0.2, duration: 0.7, type: "spring", bounce: 0.6 }}
       className="project-card h-min max-w-lg "
     >
       <div className="absolute inset-0 left-0 rounded-lg bg-black"></div>
@@ -42,8 +42,8 @@ const ProjectCard = ({ src, title, description, link }: Props) => {
         src={src}
         alt={title}
         width={1000}
-        height={1000}
-        className="relative w-full rounded-tl-lg rounded-tr-lg"
+        height={165}
+        className="relative w-full h-[175px] rounded-tl-lg rounded-tr-lg"
       />
       <div className="relative p-4 transition-all duration-500">
         <h2 className="text-2xl font-semibold text-white">{title}</h2>

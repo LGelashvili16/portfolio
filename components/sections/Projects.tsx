@@ -1,10 +1,9 @@
-'use client';
-import { PROJECTS } from '@/constants';
-import ProjectCard from '../sections-content/ProjectCard';
-import { motion } from 'framer-motion';
+"use client";
+import { PROJECTS } from "@/constants";
+import ProjectCard from "../sections-content/ProjectCard";
+import { motion } from "framer-motion";
 
 const Projects = () => {
-  console.log();
   return (
     <div
       id="projects"

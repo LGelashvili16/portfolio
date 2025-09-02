@@ -207,6 +207,27 @@ export const FOOTER_ABOUT = [
 
 export const PROJECTS = [
   {
+    src: "/projects/affix.png",
+    link: "https://affix.ge",
+    title: "Website Rental Service",
+    description:
+      "This project is a modern web application for renting digital assets, such as websites, on a subscription basis. The platform offers a seamless user experience for browsing available websites, selecting a subscription plan, and managing their rental. Key features include secure user authentication, a scalable subscription management system, and an intuitive dashboard for managing active rentals.",
+  },
+  {
+    src: "/projects/corp.png",
+    link: "https://corp.affix.ge",
+    title: "Corporate Website",
+    description:
+      "The site serves as a digital showcase for a company services and a primary point of contact for clients.",
+  },
+  {
+    src: "/projects/officemart.png",
+    link: "https://officemart.ge",
+    title: "Online Shop",
+    description:
+      "This project was a collaborative effort, and as a participant, I contributed to the development of a full-featured e-commerce platform for purchasing a wide range of office products.This online shop provides a seamless user experience, from browsing a comprehensive product catalog to a streamlined checkout process. The website is built with a robust backend.",
+  },
+  {
     src: "/projects/gallery.webp",
     link: "https://lgelashvili16.github.io/sweeft",
     title: "Photo Gallery",
@@ -216,22 +237,29 @@ export const PROJECTS = [
   {
     src: "/projects/online-store.webp",
     link: "https://lgelashvili16.github.io/online-store/",
-    title: "Online Store",
+    title: "Online Shop Design",
     description:
       "This project is an online store application with various functionalities, including form validation, user creation, user deletion, product management (such as adding products to favorites and cart), and calculating the total sum of products in the cart.",
   },
   {
-    src: "/projects/book-shop.webp",
-    link: "https://lgelashvili16.github.io/book-shop/pages/store%20page/index.html",
-    title: "Book Shop",
+    src: "/projects/shop.png",
+    link: "https://lgelashvili16.github.io/online-store/",
+    title: "Online Shop, in progress...",
     description:
-      "This project is a bookshop application created solely using DOM manipulations, without any HTML code. It includes functionalities such as adding books to the cart and calculating the total price sum.",
+      "This project is a work in progress, it is a custom e-commerce platform I'm developing for an advertising company specializing in large-format printing and signage. The website serves as an online shop for clients to browse and order a wide range of products, including signages, lightboxes, banners, and custom lighting letters.",
   },
-  {
-    src: "/projects/online-zoo.webp",
-    link: "https://lgelashvili16.github.io/online-zoo/pages/main/",
-    title: "Online Zoo",
-    description:
-      "This project showcases clean HTML, CSS, and JavaScript code. Notably, sliders are implemented without relying on any external libraries.",
-  },
+  // {
+  //   src: "/projects/book-shop.webp",
+  //   link: "https://lgelashvili16.github.io/book-shop/pages/store%20page/index.html",
+  //   title: "Book Shop",
+  //   description:
+  //     "This project is a bookshop application created solely using DOM manipulations, without any HTML code. It includes functionalities such as adding books to the cart and calculating the total price sum.",
+  // },
+  // {
+  //   src: "/projects/online-zoo.webp",
+  //   link: "https://lgelashvili16.github.io/online-zoo/pages/main/",
+  //   title: "Online Zoo",
+  //   description:
+  //     "This project showcases clean HTML, CSS, and JavaScript code. Notably, sliders are implemented without relying on any external libraries.",
+  // },
 ];
